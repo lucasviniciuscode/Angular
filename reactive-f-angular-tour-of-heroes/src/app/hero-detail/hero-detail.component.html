@@ -1,0 +1,11 @@
+<div *ngIf="hero">
+    <h2>{{hero.id}} - {{hero.name | uppercase}} Details</h2>
+    <form [formGroup]="editHero">
+        <div>
+            <label for="hero-name">Hero name: </label>
+            <input id="name" placeholder="Name" type="text" formControlName="name">
+        </div>
+    </form>
+        <button class="back" type="button" (click)="goBack()">go back</button>
+        <button class="save" type="button" (click)="save()">save</button>
+</div>
